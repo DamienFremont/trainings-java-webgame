@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Bootstrap, from Twitter</title>
+<title>Java Web Game</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -11,9 +11,28 @@
 <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css"
 	rel="stylesheet">
 <style type="text/css">
-body {
-	padding-top: 60px;
-	padding-bottom: 40px;
+     body {
+       padding-top: 20px;
+       padding-bottom: 60px;
+     }
+      
+     .leafButton {
+       margin: 80px 0;
+       text-align: center;
+     }
+      
+      .footer-bottom {
+	    clear: both;
+	    font-family: "Patua One",serif;
+	    font-size: 0.8em;
+	    padding-top: 1em;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+	
+	.footer-bottom a {
+    	font-size: inherit;
+	}
 }
 </style>
 <link
@@ -38,101 +57,109 @@ body {
 	href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">
 </head>
 <body>
-
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<button type="button" class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="brand" href="#">WebGame</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class="active"><a href="#">Accueil</a></li>
-						<li><a href="#about">A propos</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown">Configuration <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Graphisme</a></li>
-								<li class="divider"></li>
-								<li class="nav-header">Compte</li>
-								<li><a href="#">Securite</a></li>
-								<li><a href="#">Photo</a></li>
-							</ul></li>
-					</ul>
-					<form class="navbar-form pull-right">
-						<input class="span2" type="text" placeholder="Email"> <input
-							class="span2" type="password" placeholder="Mot de passe">
-						<button type="submit" class="btn">Connexion</button>
-					</form>
+		<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+						<div class="container">
+								<div class="nav-collapse collapse">
+										<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
+										<ul class="nav">
+												<li class="active"><a href="#"><i class="icon-home"></i>Accueil</a></li>
+											
+												<li><a href="login.html">Se connecter</a></li>
+												<li class="dropdown"><a href="#" class="dropdown-toggle"
+														data-toggle="dropdown"><i class="icon-wrench"></i>Configuration<b class="caret"></b></a>
+														<ul class="dropdown-menu">
+																<li><a href="#">Graphisme</a></li>
+																<li class="divider"></li>
+																<li class="nav-header"><i class="icon-user"></i>Mon compte</li>
+																<li><a href="settings.html">Propriétés</a></li>
+														</ul>
+												</li>
+												<li><a href="#contact"><i class="icon-envelope"></i></a></li>
+										</ul>
+										
+								</div>
+								<!--/.nav-collapse -->
+						</div>
 				</div>
-				<!--/.nav-collapse -->
-			</div>
 		</div>
-	</div>
 
-	<div class="container">
-
-		<!-- Main hero unit for a primary marketing message or call to action -->
-		<div class="hero-unit">
-			<h1>WebGame!</h1>
-			<p>Ce jeux va faire des trucs formidables. Ce jeux va faire des
-				trucs formidables. Ce jeux va faire des trucs formidables.</p>
-			<p>
-				<a href="#" class="btn btn-primary btn-large">En savoir plus
-					&raquo;</a> <a href="login.html" class="btn btn-primary btn-large">Login
-					&raquo;</a> <a href="settings.html" class="btn btn-primary btn-large">Configuration
+		<div class="container">
+		
+			<!-- Main hero unit for a primary marketing message or call to action -->
+			<div class="hero-unit">
+				<div class="discover-header">
+					<h2>Java Web Game : un jeu kawai</h2>
+					<p>"The Seetlers" mode espèce pour allier originalité pour nous et créativité pour l'utilisateur.</p>
+					<div class="content_block_discover">
+						<ul>
+							<li>craft d'évolution et d'especes</li>
+							<li>remplacer les ressources physique par du veg/bio</li>
+							<li>remplacer les bâtiments par des ruches/bancs/nids</li>
+							<li>remplacer les alliances par des territoires.</li>
+						</ul>
+					</div>
+					
+					<div class="content_block_discover">
+					<a href="#" class="btn-success btn-large">En savoir plus
 					&raquo;</a>
-			</p>
-		</div>
-
-		<!-- Example row of columns -->
-		<div class="row">
-			<div class="span4">
-				<h2>Fonction 1</h2>
-				<p>mon jeux va faire un truc formidable, mon jeux va faire un
-					truc formidable, mon jeux va faire un truc formidable, mon jeux va
-					faire un truc formidable</p>
-				<p>
-					<a class="btn" href="#">Voir la suite &raquo;</a>
-				</p>
+					</div>
+				</div>
 			</div>
-			<div class="span4">
-				<h2>Fonction 2</h2>
-				<p>mon jeux va faire un truc formidable, mon jeux va faire un
-					truc formidable, mon jeux va faire un truc formidable, mon jeux va
-					faire un truc formidable</p>
-				<p>
-					<a class="btn" href="#">Voir la suite &raquo;</a>
+			
+			<!-- Play -->
+		    <div class="leafButton">
+		      	<p>
+					<a href="#"  class="btn-success btn-large">Jouer</a>
 				</p>
+		    </div>
+			
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="span4">
+						<h3>Gestion</h3>
+						<p>Gérer ses bestioles, garantir l'approvisionnement en ressource et évoluer vers de plus haut niveau d'espèces.</p>
+						<p>
+							<a class="btn" href="#">Voir la suite &raquo;</a>
+						</p>
+				</div>
+				<div class="span4">
+						<h3>Commerce</h3>
+						<p>Acheter, vendre, au meilleur moment</p>
+						<p>
+							<a class="btn" href="#">Voir la suite &raquo;</a>
+						</p>
+				</div>
+				<div class="span4">
+						<h3>Politique</h3>
+						<p>Etablisser des alliances avec vos voisins pour étendre votre colonie.</p>
+						<p>
+							<a class="btn" href="#">Voir la suite &raquo;</a>
+						</p>
+				</div>
 			</div>
-			<div class="span4">
-				<h2>Fonction 3</h2>
-				<p>mon jeux va faire un truc formidable, mon jeux va faire un
-					truc formidable, mon jeux va faire un truc formidable, mon jeux va
-					faire un truc formidable</p>
-				<p>
-					<a class="btn" href="#">Voir la suite &raquo;</a>
-				</p>
-			</div>
-		</div>
-
-		<hr>
-
-		<footer>
-			<p>&copy; Dada et Clem (2013)</p>
-		</footer>
-
+			
+			<hr>
+			
+			<footer>
+					<div class="footer-bottom">
+						<p>&copy; Damien et Clément - 2013 
+						-
+						<a target="_blank" href="https://github.com">GitHub</a>
+						-
+						</p>
+					</div>
+			</footer>
+			
+	<!-- Le container -->
 	</div>
-	<!-- /container -->
-
+	
+	
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
+	<script 
+		src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
 	<script
 		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-transition.js"></script>
 	<script
@@ -143,7 +170,8 @@ body {
 		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-dropdown.js"></script>
 	<script
 		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-scrollspy.js"></script>
-	<script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tab.js"></script>
+	<script 
+		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tab.js"></script>
 	<script
 		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tooltip.js"></script>
 	<script
