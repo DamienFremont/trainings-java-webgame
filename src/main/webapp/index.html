@@ -1,188 +1,209 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="utf-8">
-<title>Java Web Game</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+  <head>
+    <meta charset="utf-8">
+    <title>Java Web Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!-- Le styles -->
-<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css"
-	rel="stylesheet">
-<style type="text/css">
-     body {
-       padding-top: 20px;
-       padding-bottom: 60px;
-     }
-      
-     .leafButton {
-       margin: 80px 0;
-       text-align: center;
-     }
-      
-      .footer-bottom {
-	    clear: both;
-	    font-family: "Patua One",serif;
-	    font-size: 0.8em;
-	    padding-top: 1em;
-	    text-align: center;
-	    text-transform: uppercase;
-	}
-	
-	.footer-bottom a {
-    	font-size: inherit;
-	}
-}
-</style>
-<link
-	href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"
-	rel="stylesheet">
+    <!-- Le styles -->
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+	  
+	  /* Main */
+      .jumbotron {
+        margin: 80px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 100px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+	  
+	  /* Custom container */
+      .container > hr {
+        margin: 60px 0;
+      }
+	  
+	  .form-horizontal {
+		margin: 10px 25px;
+	  }
+	  
+	  .form-horizontal label {
+		margin: 5px 0px;
+	  }
+	  
+    </style>
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://getbootstrap.com/2.3.2/assets/js/html5shiv.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-<!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon"
-	href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">
-</head>
-<body>
-		<div class="navbar navbar-fixed-top">
-				<div class="navbar-inner">
-						<div class="container">
-								<div class="nav-collapse collapse">
-										<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
-										<ul class="nav">
-												<li class="active"><a href="#"><i class="icon-home"></i>Accueil</a></li>
-											
-												<li><a href="login.html">Se connecter</a></li>
-												<li class="dropdown"><a href="#" class="dropdown-toggle"
-														data-toggle="dropdown"><i class="icon-wrench"></i>Configuration<b class="caret"></b></a>
-														<ul class="dropdown-menu">
-																<li><a href="#">Graphisme</a></li>
-																<li class="divider"></li>
-																<li class="nav-header"><i class="icon-user"></i>Mon compte</li>
-																<li><a href="settings.html">Propriétés</a></li>
-														</ul>
-												</li>
-												<li><a href="#contact"><i class="icon-envelope"></i></a></li>
-										</ul>
-										
-								</div>
-								<!--/.nav-collapse -->
-						</div>
-				</div>
-		</div>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png">
+  </head>
 
-		<div class="container">
-		
-			<!-- Main hero unit for a primary marketing message or call to action -->
-			<div class="hero-unit">
-				<div class="discover-header">
-					<h2>Java Web Game : un jeu kawai</h2>
-					<p>"The Seetlers" mode espèce pour allier originalité pour nous et créativité pour l'utilisateur.</p>
-					<div class="content_block_discover">
-						<ul>
-							<li>craft d'évolution et d'especes</li>
-							<li>remplacer les ressources physique par du veg/bio</li>
-							<li>remplacer les bâtiments par des ruches/bancs/nids</li>
-							<li>remplacer les alliances par des territoires.</li>
-						</ul>
-					</div>
-					
-					<div class="content_block_discover">
-					<a href="#" class="btn-success btn-large">En savoir plus
-					&raquo;</a>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Play -->
-		    <div class="leafButton">
-		      	<p>
-					<a href="#"  class="btn-success btn-large">Jouer</a>
-				</p>
-		    </div>
-			
-			<!-- Example row of columns -->
-			<div class="row">
-				<div class="span4">
-						<h3>Gestion</h3>
-						<p>Gérer ses bestioles, garantir l'approvisionnement en ressource et évoluer vers de plus haut niveau d'espèces.</p>
-						<p>
-							<a class="btn" href="#">Voir la suite &raquo;</a>
-						</p>
-				</div>
-				<div class="span4">
-						<h3>Commerce</h3>
-						<p>Acheter, vendre, au meilleur moment</p>
-						<p>
-							<a class="btn" href="#">Voir la suite &raquo;</a>
-						</p>
-				</div>
-				<div class="span4">
-						<h3>Politique</h3>
-						<p>Etablisser des alliances avec vos voisins pour étendre votre colonie.</p>
-						<p>
-							<a class="btn" href="#">Voir la suite &raquo;</a>
-						</p>
-				</div>
-			</div>
-			
-			<hr>
-			
-			<footer>
-					<div class="footer-bottom">
-						<p>&copy; Damien et Clément - 2013 
-						-
-						<a target="_blank" href="https://github.com">GitHub</a>
-						-
-						</p>
-					</div>
-			</footer>
-			
-	<!-- Le container -->
-	</div>
+  <body>   
+  
+    <!-- Dev menu bar -->
+	<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <a class="brand">Java Web Game</a>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+					<ul class="nav">
+					  <li class="dropdown">
+                        <a href="#" class="dropdown-toggle-active" data-toggle="dropdown">A propos de <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						  <li class="divider"></li>
+						  <li class="nav-header">Jeu</li>
+						  <li class="divider"></li>
+                          <li><a href="#">Règles du jeu</a></li>
+                          <li><a href="#">Conditions de victoire</a></li>
+                          <li><a href="#">Bien débuter</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Wiki</a></li>
+                      <li><a href="#">Forum</a></li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input class="search-query span2" placeholder="Rechercher" type="text">
+                    </form>
+					<a class="brand"><i class="icon-search"></i></a>
+					<ul class="nav pull-right">
+						<li class="divider-vertical"></li>
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Se connecter <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>	
+									<form class="form-horizontal">
+										<label for="inputEmail">Email</label>
+										<input type="text" id="inputEmail" placeholder="Email">
+										<li class="divider"></li>
+										<label for="inputPassword">Mot de passe</label>
+										<input type="password" id="inputPassword" placeholder="Mot de passe">
+										<li class="divider"></li>
+										<label class="checkbox">
+											<input type="checkbox"> Se souvenir de moi
+										</label>
+										<button type="submit" class="btn">Se connecter</button>
+										<button type="cancel" class="btn">Annuler</button>
+									</form>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Créer un compte <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>	
+									<form class="form-horizontal">
+										<label for="inputEmail">Nom de compte</label>
+										<input type="text" id="inputEmail" placeholder="Nom de compte">
+										<label for="inputEmail">Email</label>
+										<input type="text" id="inputEmail" placeholder="Email">
+										<li class="divider"></li>
+										<label for="inputPassword">Mot de passe</label>
+										<input type="password" id="inputPassword" placeholder="Mot de passe">
+										<label for="confirmPassword">Confirmer le mot de passe</label>
+										<input type="password" id="inputPassword" placeholder="Mot de passe">
+										<li class="divider"></li>
+										<button type="register" class="btn">S'enregistrer</button>
+										<button type="cancel" class="btn">Annuler</button>
+									</form>
+								</li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li>
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						  <li class="nav-header">Configuration</li>
+						  <li class="divider"></li>
+						  <li class="disabled"><a href="#">Paramétrage</a></li>
+                          <li class="disabled"><a href="#">Options de sécurité</a></li>
+						  <li class="disabled"><a href="#">Graphismes</a></li>
+                        </ul>
+						<li class="divider-vertical"></li>
+						<li><a href="#"><div title="Nous contacter"><i class="icon-envelope"></i></div></a></li>	
+                      </li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
 	
-	
-	<!-- Le javascript
+	<div class="jumbotron">
+		<h1>Rejoignez l'aventure maintenant !</h1>
+		<p class="lead">Java Web Game est un jeu de gestion où vous devrez faire prospérer une colonie de petites bêtes.</p>
+		<p>
+		<a class="btn btn-success btn-large" href="loading.html">
+		Jouer 
+		</a>
+		</p>
+    </div>
+
+    <hr>
+
+    <!-- Example row of columns -->
+    <div class="row-fluid">
+		<div class="span4">
+			<h2>Gestion</h2>
+			<p>Collectez les ressources indispensables pour faire évoluer vos créatures et votre colonie.</p>
+			<p><a class="btn" href="#">En savoir plus &raquo;</a></p>
+        </div>
+        <div class="span4">
+			<h2>Aventure</h2>
+			<p>Explorez le royaume du jardin pour découvrir des trésors cachées et combattre des ennemis insoupsonnés.</p>
+			<p><a class="btn" href="#">En savoir plus &raquo;</a></p>
+       </div>
+       <div class="span4">
+			<h2>Conquête</h2>
+			<p>Préparez-vous, minus, nous allons conquérir le monde !</p>
+			<p><a class="btn" href="#">En savoir plus &raquo;</a></p>
+        </div>
+    </div>
+
+  
+    <!-- Le javascript
     ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script 
-		src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-transition.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-alert.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-modal.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-dropdown.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-scrollspy.js"></script>
-	<script 
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tab.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tooltip.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-popover.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-button.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-collapse.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-carousel.js"></script>
-	<script
-		src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-typeahead.js"></script>
-</body>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://getbootstrap.com/2.3.2/assets/js/jquery.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-transition.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-alert.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-modal.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tab.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-popover.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-button.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-collapse.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
 </html>
