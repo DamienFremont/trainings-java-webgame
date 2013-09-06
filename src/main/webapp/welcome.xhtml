@@ -4,8 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:body>
-	<p>
-		It's <b>#{gameBean.userName}'s world</b> here!
-	</p>
+	<h3>Java WebGame</h3>
+	<p>Nice to meet you #{authentBean.userName}. What do you want to
+		do?</p>
+	<h:form>
+		Manage some things ?
+		<h:commandButton action="game" value="Go to your world" />
+	</h:form>
 </h:body>
 </html>
