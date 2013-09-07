@@ -8,13 +8,16 @@
 	<ui:composition template="/template/common/commonLayout.xhtml">
 		<ui:define name="content">
 
-			<h3>Java WebGame</h3>
-			<p>Nice to meet you #{authentBean.userName}. What do you want to
-				do?</p>
-			<h:form>
-		Manage some things ?
-		<h:commandButton action="game" value="Go to your world" />
-			</h:form>
+			<div id="select-details">
+				<label>Niveau de détail</label> <select>
+					<option>Bas</option>
+					<option>Normal</option>
+				</select>
+			</div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">Sauvegarder</button>
+				<button type="button" class="btn">Annuler</button>
+			</div>
 
 		</ui:define>
 	</ui:composition>
