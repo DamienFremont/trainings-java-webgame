@@ -14,8 +14,8 @@ public class GameBean implements Serializable {
 		System.out.println("Game started!");
 	}
 
-	public String getUserName() {
-		return "New player";
+	public String getWorldName() {
+		return "New world";
 	}
 
 }
