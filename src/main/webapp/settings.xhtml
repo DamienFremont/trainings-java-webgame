@@ -8,16 +8,36 @@
 	<ui:composition template="/template/common/commonLayout.xhtml">
 		<ui:define name="content">
 
-			<div id="select-details">
-				<label>Niveau de détail</label> <select>
-					<option>Bas</option>
-					<option>Normal</option>
-				</select>
-			</div>
-			<div class="form-actions">
-				<button type="submit" class="btn btn-primary">Sauvegarder</button>
-				<button type="button" class="btn">Annuler</button>
-			</div>
+			<h1>Paramètres</h1>
+			<form class="form-horizontal">
+				<fieldset>
+
+					<!-- Form Name -->
+					<legend>Graphisme</legend>
+
+					<!-- Select Basic -->
+					<div class="control-group">
+						<label class="control-label" for="selectbasic">Niveau de
+							détail</label>
+						<div class="controls">
+							<select id="selectbasic" name="selectbasic" class="input-xlarge">
+								<option>Bas</option>
+								<option>Normal</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Button (Double) -->
+					<div class="control-group">
+						<label class="control-label" for="button1id"></label>
+						<div class="controls">
+							<button id="button1id" name="button1id" class="btn btn-primary">Sauvegarder</button>
+							<button id="button2id" name="button2id" class="btn">Annuler</button>
+						</div>
+					</div>
+
+				</fieldset>
+			</form>
 
 		</ui:define>
 	</ui:composition>
