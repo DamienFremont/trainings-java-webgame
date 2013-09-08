@@ -8,8 +8,8 @@ import java.io.Serializable;
 @SessionScoped
 public class GameBean implements Serializable {
 
-	private static final long serialVersionUID = -8671811166793813239L;
-	
+	private static final long serialVersionUID = 4521274349458738158L;
+
 	public String getWorldName() {
 		return "New world";
 	}

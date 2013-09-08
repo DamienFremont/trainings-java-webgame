@@ -25,5 +25,4 @@ public class AuthentBean implements Serializable {
 		this.userName = userName;
 		System.out.println("userName = " + userName);
 	}
-
 }

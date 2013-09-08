@@ -8,8 +8,8 @@ import java.io.Serializable;
 @SessionScoped
 public class SettingsBean implements Serializable {
 
-	private static final long serialVersionUID = -8671811166793813239L;
-
+	private static final long serialVersionUID = -1034633155275089191L;
+	
 	private int details = 0;
 
 	public int getDetails() {
