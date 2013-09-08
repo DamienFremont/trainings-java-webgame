@@ -3,13 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 	<ui:composition template="/template/common/commonLayout.xhtml">
 		<ui:define name="content">
 
 			<h1>Paramètres</h1>
-			<form class="form-horizontal">
+			<h:form class="form-horizontal">
 				<fieldset>
 
 					<!-- Form Name -->
@@ -20,10 +21,11 @@
 						<label class="control-label" for="selectbasic">Niveau de
 							détail</label>
 						<div class="controls">
-							<select id="selectbasic" name="selectbasic" class="input-xlarge">
-								<option>Bas</option>
-								<option>Normal</option>
-							</select>
+							<h:selectOneMenu value="#{settingsBean.details}" id="selectbasic"
+								name="selectbasic" class="input-xlarge">
+								<f:selectItem itemValue="0" itemLabel="Bas" />
+								<f:selectItem itemValue="1" itemLabel="Normal" />
+							</h:selectOneMenu>
 						</div>
 					</div>
 
@@ -31,13 +33,15 @@
 					<div class="control-group">
 						<label class="control-label" for="button1id"></label>
 						<div class="controls">
-							<button id="button1id" name="button1id" class="btn btn-primary">Sauvegarder</button>
-							<button id="button2id" name="button2id" class="btn">Annuler</button>
+							<h:commandButton id="button1id" name="button1id"
+								class="btn btn-primary" value="Sauvegarder" action="settings"></h:commandButton>
+							<a href="settings.xhtml" id="button2id" name="button2id"
+								class="btn">Annuler</a>
 						</div>
 					</div>
 
 				</fieldset>
-			</form>
+			</h:form>
 
 		</ui:define>
 	</ui:composition>
