@@ -9,11 +9,7 @@ import java.io.Serializable;
 public class GameBean implements Serializable {
 
 	private static final long serialVersionUID = -8671811166793813239L;
-
-	public GameBean() {
-		System.out.println("Game started!");
-	}
-
+	
 	public String getWorldName() {
 		return "New world";
 	}
