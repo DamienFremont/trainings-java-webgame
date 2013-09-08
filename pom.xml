@@ -9,6 +9,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>
 		<jsf.version>2.1.7</jsf.version>
+
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
 	<dependencies>
 
@@ -57,7 +60,7 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sun.el</groupId>
 			<artifactId>el-ri</artifactId>
@@ -73,6 +76,21 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>src/main/webapp</directory>
+							<!-- override the destination directory for this resource -->
+							<!-- enable filtering -->
+							<filtering>true</filtering>
+						</resource>
+					</webResources>
 				</configuration>
 			</plugin>
 		</plugins>
