@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {
+#wrap .container {
 	padding-top: 60px;
 	padding-bottom: 40px;
 }

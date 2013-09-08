@@ -6,50 +6,61 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 
-    <meta charset="utf-8"/>
-    <title>Java Web Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-    
-    <!-- Le styles -->
-    <link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="style/style.css"/>
-    <link rel="stylesheet" href="style/signin-style.css"/>
-    <link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"/>
-    
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
+	<meta charset="utf-8" />
+	<title>Java Web Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+
+	<!-- Le styles -->
+	<link rel="stylesheet"
+		href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+	<link rel="stylesheet" href="style/style.css" />
+	<link rel="stylesheet" href="style/signin-style.css" />
+	<link rel="stylesheet" href="style/sticky-footer-style.css" />
+	<link rel="stylesheet"
+		href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
-    
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png"/>
-    <link rel="shortcut icon" href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png"/>
- 
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144"
+		href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-144-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114"
+		href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-114-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72"
+		href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-72-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed"
+		href="http://getbootstrap.com/2.3.2/assets/ico/apple-touch-icon-57-precomposed.png" />
+	<link rel="shortcut icon"
+		href="http://getbootstrap.com/2.3.2/assets/ico/favicon.png" />
+
 </h:head>
 <h:body>
-	<div id="page">
-		<div id="header">
-			<ui:insert name="header">
-				<ui:include src="/template/common/commonHeader.xhtml" />
+
+	<ui:insert name="header">
+		<ui:include src="/template/common/commonHeader.xhtml" />
+	</ui:insert>
+
+	<!-- Part 1: Wrap all page content here -->
+	<div id="wrap">
+
+		<!-- Begin page content -->
+		<div class="container">
+			<ui:insert name="content">
+				<ui:include src="/template/common/commonContent.xhtml" />
 			</ui:insert>
 		</div>
-		<div class="container">
-			<div id="content" >
-				<ui:insert name="content" >
-					<ui:include src="/template/common/commonContent.xhtml" />
-				</ui:insert>
-			</div>
-			<div id="footer">
-				<ui:insert name="footer">
-					<ui:include src="/template/common/commonFooter.xhtml" />
-				</ui:insert>
-			</div>
-		</div> <!-- /container -->
+
+		<div id="push"></div>
 	</div>
+
+	<ui:insert name="footer">
+		<ui:include src="/template/common/commonFooter.xhtml" />
+	</ui:insert>
+
 </h:body>
 </html>
