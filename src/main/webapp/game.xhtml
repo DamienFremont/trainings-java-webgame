@@ -8,9 +8,12 @@
 	<ui:composition template="/template/common/commonLayout.xhtml">
 		<ui:define name="content">
 
-			<p>
-				C'est votre partie #{authentBean.userName}, sont nom est <b>#{gameBean.worldName}</b>!
-			</p>
+			<div class="hero-unit">
+				<h1>Partie</h1>
+				<p>
+					C'est votre partie #{authentBean.userName}, sont nom est <b>#{gameBean.worldName}</b>!
+				</p>
+			</div>
 
 		</ui:define>
 	</ui:composition>
