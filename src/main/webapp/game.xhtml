@@ -34,38 +34,48 @@
 			</tbody>
 		</table> -->
         
+        <h1>Bâtiments de votre colonie</h1>
         
+        <h:form>
                 
-		<!-- Tableau dynamique
-		@var="currentBuilding" est l'objet temporaire de construction du tableau 
-		-->
-		<h:dataTable class="table table-bordered" value="#{buildingBean.buildingList}" var="currentBuilding">
-		
-			<h:column>
-				<!-- column header -->
-				<f:facet name="header">Nom</f:facet>
-				<!-- row record -->
-				#{currentBuilding.buildingName}
-			</h:column>
+			<!-- Tableau dynamique
+			@var="currentBuilding" est l'objet temporaire de construction du tableau 
+			-->
+			<h:dataTable class="table table-bordered" value="#{buildingBean.buildingList}" var="currentBuilding">
+			
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Nom</f:facet>
+					<!-- row record -->
+					#{currentBuilding.buildingName}
+				</h:column>
+					
+				<h:column>
+					<f:facet name="header">Status</f:facet>
+					#{currentBuilding.buildingStatus}
+				</h:column>
 				
-			<h:column>
-				<f:facet name="header">Status</f:facet>
-				#{currentBuilding.buildingStatus}
-			</h:column>
-			
-			<h:column>
-				<f:facet name="header">Production</f:facet>
-				#{currentBuilding.buildingProduction}
-			</h:column>
-			
-		</h:dataTable>
+				<h:column>
+					<f:facet name="header">Production</f:facet>
+					#{currentBuilding.buildingProduction}
+				</h:column>
+				
+				<h:column>
+	 
+	    			<f:facet name="header">Action</f:facet>
+	 
+	    			<h:commandLink value="Détruire" action="#{buildingBean.deleteBuilding(currentBuilding)}" />
+	 
+	    		</h:column>
+				
+			</h:dataTable>
 		
+		</h:form>
 		
 		<div class="btn-toolbar">	
 			<div class="btn-group">
 				<h:form class="form-horizontal">
 					<h:commandButton value="Constuire" action="#{buildingBean.addBuilding}" class="btn" ></h:commandButton>
-					<h:commandButton value="Détruire" action="#{buildingBean.deleteBuilding}" class="btn" ></h:commandButton>
    				</h:form>
     		</div>
 		</div>

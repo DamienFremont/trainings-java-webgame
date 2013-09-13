@@ -43,9 +43,9 @@ public class BuildingBean implements Serializable {
 	}
 	
 	/* Delete a building from the list */
-	public void deleteBuilding() {
+	public void deleteBuilding(Building building) {
 		//TODO LOG
-		this.buildingList.remove(this.building);
+		this.buildingList.remove(building);
 	}
 	
 	/* Getter */
