@@ -38,8 +38,10 @@
 		
 		<div class="btn-toolbar">	
 			<div class="btn-group">
-				<h:commandButton value="Constuire" action="#{BuildingBean.addBuilding}" class="btn" ></h:commandButton>
-				<h:button value="Détruire" class="btn"></h:button>
+				<h:form class="form-horizontal">
+					<h:commandButton value="Constuire" action="#{buildingBean.addBuilding()}" class="btn" ></h:commandButton>
+					<h:button value="Détruire" class="btn"></h:button>
+   				</h:form>
     		</div>
 		</div>
     </div>
