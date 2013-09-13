@@ -3,6 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 	<ui:composition template="/template/common/commonLayout.xhtml">
@@ -14,11 +15,9 @@
 			
     <div class="hero-unit">
 		
-    	<table class="table table-bordered" >
-    		<!-- Table name -->
-    		<caption>Bâtiments de votre colonie</caption>
     		
-    		<!-- Table titles -->
+    	<!-- Table titles
+    		<caption>Bâtiments de votre colonie</caption>
 			<thead>
 				<tr>
 				  <th>Nom</th>
@@ -28,19 +27,45 @@
 			</thead>
 			<tbody>
 				<tr>
-				  <!-- {buildingBean.buildingList.getName} -->
 				  <td>#</td>
 				  <td>#</td>
 				  <td>#</td>
 				</tr>
 			</tbody>
-		</table>
+		</table> -->
+        
+        
+                
+		<!-- Tableau dynamique
+		@var="currentBuilding" est l'objet temporaire de construction du tableau 
+		-->
+		<h:dataTable class="table table-bordered" value="#{buildingBean.buildingList}" var="currentBuilding">
+		
+			<h:column>
+				<!-- column header -->
+				<f:facet name="header">Nom</f:facet>
+				<!-- row record -->
+				#{currentBuilding.buildingName}
+			</h:column>
+				
+			<h:column>
+				<f:facet name="header">Status</f:facet>
+				#{currentBuilding.buildingStatus}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Production</f:facet>
+				#{currentBuilding.buildingProduction}
+			</h:column>
+			
+		</h:dataTable>
+		
 		
 		<div class="btn-toolbar">	
 			<div class="btn-group">
 				<h:form class="form-horizontal">
-					<h:commandButton value="Constuire" action="#{buildingBean.addBuilding()}" class="btn" ></h:commandButton>
-					<h:button value="Détruire" class="btn"></h:button>
+					<h:commandButton value="Constuire" action="#{buildingBean.addBuilding}" class="btn" ></h:commandButton>
+					<h:commandButton value="Détruire" action="#{buildingBean.deleteBuilding}" class="btn" ></h:commandButton>
    				</h:form>
     		</div>
 		</div>

@@ -26,25 +26,25 @@ public class BuildingBean implements Serializable {
 	private Building building = new Building("Hall de la colonie", true, 1);
 	
 	
-	public String getName() {
-		String name = null;
-		
-		for (int k=0; k<this.buildingList.size(); k++)
-		{
-			name = this.getBuildingList().get(k).getBuildingName();
+	/** Example of foreach in Java **/
+	/**public Building getName() {		
+		Building name = null;
+		for (Building currentBuilding : this.buildingList) {
+			name = currentBuilding;
 		}
 		
-		return name;	
-	}
+		return name;
+	}**/
 	
 	/* Add a building to the list */
 	public void addBuilding() {
-		System.out.println("Ceci doit apparait en ligne de commande!");
+		//TODO LOG
 		this.buildingList.add(this.building);
 	}
 	
 	/* Delete a building from the list */
 	public void deleteBuilding() {
+		//TODO LOG
 		this.buildingList.remove(this.building);
 	}
 	
