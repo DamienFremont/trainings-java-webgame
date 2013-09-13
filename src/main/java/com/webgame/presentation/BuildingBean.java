@@ -16,6 +16,8 @@ public class BuildingBean implements Serializable {
 	
 	public BuildingBean() {
 		this.buildingList = new ArrayList<Building>();
+		buildingList.add(new Building("name", true, 2));
+		buildingList.add(new Building("name", true, 4));
 	}
 
 	private ArrayList<Building> buildingList;
