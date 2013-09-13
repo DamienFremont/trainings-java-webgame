@@ -1,6 +1,10 @@
 package com.webgame.abstraction;
 
-public class Building {
+import java.io.Serializable;
+
+public class Building implements Serializable {
+
+	private static final long serialVersionUID = -2514817236355877826L;
 
 	public Building(String name, boolean status, double production) {
 		this.buildingName = name;
