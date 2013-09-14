@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+	<ui:composition template="/template/common/commonLayout.xhtml">
+		<ui:define name="content">
+
+			<div class="page-header">
+				<h1>Bâtiments de votre colonie</h1>
+			</div>
+			<div class="btn-toolbar">
+				<div class="btn-group">
+					<h:form class="form-horizontal">
+						<h:commandLink class="btn" action="welcome">
+							<i class="icon-chevron-left"></i> Retour à la partie</h:commandLink>
+						<h:commandLink class="btn btn-primary"
+							action="#{buildingBean.addBuilding}">
+							<i class="icon-plus icon-white"></i> Constuire
+						</h:commandLink>
+					</h:form>
+				</div>
+			</div>
+			<h:form>
+				<h:dataTable class="table table-bordered"
+					value="#{buildingBean.buildingList}" var="currentBuilding">
+					<h:column>
+						<f:facet name="header">Nom</f:facet>
+					#{currentBuilding.buildingName}
+				</h:column>
+					<h:column>
+						<f:facet name="header">Status</f:facet>
+					#{currentBuilding.buildingStatus}
+				</h:column>
+					<h:column>
+						<f:facet name="header">Production</f:facet>
+					#{currentBuilding.buildingProduction}
+				</h:column>
+					<h:column>
+						<f:facet name="header">Action</f:facet>
+						<h:commandLink class="btn btn-danger"
+							action="#{buildingBean.deleteBuilding(currentBuilding)}">
+							<i class="icon-remove icon-white"></i> Détruire 
+						</h:commandLink>
+					</h:column>
+				</h:dataTable>
+			</h:form>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

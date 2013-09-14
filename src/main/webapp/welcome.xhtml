@@ -8,15 +8,27 @@
 	<ui:composition template="/template/common/commonLayout.xhtml">
 		<ui:define name="content">
 
-			<div class="hero-unit">
-				<h1>Bienvenue sur JavaWebGame</h1>
-				<p>Ravis de vous voir #{authentBean.userName}. Que voulez vous
-					faire maintenant?</p>
-				<h:form>
-					<h:commandButton class="btn btn-primary btn-large" action="game" value="Voir votre partie" />
-				</h:form>
-			</div>
-			
+			<h1>Bienvenue sur JavaWebGame</h1>
+			<p>Ravis de vous voir #{authentBean.userName}. Que voulez vous
+				faire maintenant?</p>
+			<h:form>
+				<h:commandLink class="btn btn-primary btn-large" action="buildings"
+					value="Voir vos batiments">
+					<i class="icon-white icon-chevron-right"></i>
+				</h:commandLink>
+					&nbsp;
+						<h:commandLink class="btn btn-primary btn-large"
+					action="resources" value="Voir vos resources">
+					<i class="icon-white icon-chevron-right"></i>
+				</h:commandLink>
+					&nbsp;
+					<h:commandLink class="btn btn-danger"
+					action="#{resourceBean.reset()}">
+					<i class="icon-white icon-remove"></i>
+						repartir à zéro!
+					</h:commandLink>
+			</h:form>
+
 		</ui:define>
 	</ui:composition>
 </h:body>
