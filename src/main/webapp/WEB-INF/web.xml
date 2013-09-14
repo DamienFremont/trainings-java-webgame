@@ -7,6 +7,12 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 
 	<display-name>WebGame</display-name>
 
+	<!-- fix EL expressions on JavaEE server -->
+	<context-param>
+		<param-name>com.sun.faces.expressionFactory</param-name>
+		<param-value>com.sun.el.ExpressionFactoryImpl</param-value>
+	</context-param>
+
 	<!-- Change to "Production" when you are ready to deploy -->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
