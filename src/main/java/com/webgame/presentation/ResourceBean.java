@@ -59,10 +59,11 @@ public class ResourceBean implements Serializable {
 	}
 
 	private Resource getResource(ResourceType type) {
-		for (Resource res : resourceList)
-			if (res.getType().equals(type))
-				return res;
-		return null;
+		Resource res = null;
+		for (Resource r : resourceList)
+			if (r.getType().equals(type))
+				res = r;
+		return res;
 	}
 
 	public Boolean canShop(Resource resource) {
