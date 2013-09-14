@@ -9,7 +9,17 @@
 	<ui:composition template="/template/common/commonLayout.xhtml">
 		<ui:define name="content">
 
-			<h1>Resources</h1>
+			<div class="page-header">
+				<h1>Resources</h1>
+			</div>
+			<div class="btn-toolbar">
+				<div class="btn-group">
+					<h:form class="form-horizontal">
+						<h:commandLink class="btn" action="welcome">
+							<i class="icon-chevron-left"></i> Retour à la partie</h:commandLink>
+					</h:form>
+				</div>
+			</div>
 			<h:form>
 				<h:dataTable class="table table-bordered"
 					value="#{resourceBean.resourceList}" var="o">
@@ -24,6 +34,18 @@
 					<h:column>
 						<f:facet name="header">Max</f:facet>
 						/ #{o.max}
+					</h:column>
+					<h:column>
+						<f:facet name="header"></f:facet>
+						<ui:fragment rendered="#{not empty o.neededResourceCountList}">
+							<h:commandLink
+								class="btn btn-primary #{not resourceBean.canShop(o) ? 'disabled':'' }"
+								action="#{resourceBean.shop(o)}"
+								disabled="#{not resourceBean.canShop(o)}">
+								<i class="icon-shopping-cart icon-white"></i> Acheter 
+							</h:commandLink>
+							nécessite #{o.neededResourceCountList}
+						</ui:fragment>
 					</h:column>
 				</h:dataTable>
 			</h:form>
