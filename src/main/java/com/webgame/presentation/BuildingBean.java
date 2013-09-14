@@ -3,7 +3,7 @@ package com.webgame.presentation;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import com.webgame.abstraction.Building;
+import com.webgame.model.Building;
 
 import java.io.Serializable;
 import java.util.ArrayList;

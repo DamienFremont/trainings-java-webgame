@@ -1,4 +1,4 @@
-package com.webgame.abstraction;
+package com.webgame.model;
 
 import java.io.Serializable;
 
