@@ -7,3 +7,7 @@ Its purpose is to practice java on a project, with a very small team, on free ti
 
 Contributors: DamienFremont and ClementBaudry.
 Official site is coming soon.
+
+ABANDONED
+============
+This project successfully help us progress in Java but now requires too much personal time.
